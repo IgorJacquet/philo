@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: igor <igor@student.42.fr>                  +#+  +:+       +#+         #
+#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/01 05:51:11 by igor              #+#    #+#              #
-#    Updated: 2021/07/01 06:47:01 by igor             ###   ########.fr        #
+#    Updated: 2021/07/01 07:24:07 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I. -I./includes -pthread
 
 INCLUDES = includes/philo.h
 

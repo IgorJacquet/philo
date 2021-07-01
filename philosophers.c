@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philosophers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igor <igor@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 06:49:18 by igor              #+#    #+#             */
-/*   Updated: 2021/07/01 06:49:56 by igor             ###   ########.fr       */
+/*   Updated: 2021/07/01 07:27:48 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	eating(t_philo *philo)
 	philo->eating = 1;
 	philo->last_meal = get_time();
 	philo->time_limit = philo->last_meal + philo->data->time_to_die;
-	print(philo, EATING);
 	philo->eat_count++;
 	philo->eating = 0;
 	pthread_mutex_unlock(&philo->mutex);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igor <igor@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 06:49:05 by igor              #+#    #+#             */
-/*   Updated: 2021/07/01 06:50:36 by igor             ###   ########.fr       */
+/*   Updated: 2021/07/01 07:31:52 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*monitor_count(void *data_void)
 {
 	t_data	*data;
-	int			i;
+	int		i;
 
 	i = 0;
 	data = (t_data *)data_void;
@@ -32,7 +32,7 @@ void	*monitor_count(void *data_void)
 void	*monitor(void *data_void)
 {
 	t_data	*data;
-	int			i;
+	int		i;
 
 	data = (t_data *)data_void;
 	while (1)
@@ -42,7 +42,8 @@ void	*monitor(void *data_void)
 		{
 			if (data->exit_thread)
 				return ((void *)0);
-			if (!data->philo[i].eating && get_time() > data->philo[i].time_limit)
+			if (!data->philo[i].eating && get_time() > \
+			data->philo[i].time_limit)
 			{
 				print(&data->philo[i], DYING);
 				pthread_mutex_lock(&data->mut_exit_thread);
